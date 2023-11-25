@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Atlas - editProfile</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/atlascss.css') }}">
+    </head>
+    <body background="https://www.tapeciarnia.pl/tapety/normalne/tapeta-jesienne-drzewa-i-opadle-liscie-w-parku.jpg">
+        <form action="/editProfile" method="post">
+            <div>
+                <h1 style="color:white;"> editProfile </h1>
+                {% if log != '' %}
+                    <h4 > {{ log }}</h4>
+                {% endif %}
+                <div >
+                    <label class="y" for="email">Email address</label>
+                    <input type="email" placeholder="Enter Email" name="email" required />
+                </div>
+              
+                <div >
+                    <label class="y" for="password">Password</label>
+                    <input type="password" placeholder="Enter Password" name="password" required />
+                </div>
+
+                <div >
+                    <label class="y" for="firstName">firstName</label>
+                    <input type="text" placeholder="Enter firstName" name="firstName" required />
+                </div>
+
+                <div >
+                    <label class="y" for="lastName">lastName</label>
+                    <input type="text" placeholder="Enter lastName" name="lastName" required />
+                </div>
+
+    
+                <button class="x" type="submit">editProfile</button>
+            </div>
+            </form>
+    </body>
+</html>

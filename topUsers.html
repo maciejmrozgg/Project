@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> Atlas - Top Users</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/atlascss.css') }}">
+    </head>
+    <body background="https://www.tapeciarnia.pl/tapety/normalne/tapeta-jesienne-drzewa-i-opadle-liscie-w-parku.jpg">
+        <h1 style="color:white;">Top Users</h1>
+        <table class="x">
+            {% for user in users %}
+            <tr>
+                <th scope="row">{{user.email}}</th>
+                <td>{{user.numberOfLogins}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

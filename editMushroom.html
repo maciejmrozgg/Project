@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title> Atlas - editMushroom </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/atlascss.css') }}">
+    </head>
+    <body background="https://www.tapeciarnia.pl/tapety/normalne/268563_las_drzewa_liscie_mech.jpg">
+        <form action="/mushroomsedit/{{ mushroom.id }}" method="post">
+            <h1 style="color:white;"> Edit Mushroom</h1>
+            <div >
+                <label class="y" for="imgURL">ImageURL</label>
+                <input type="text" value="{{ mushroom.imgURL }}" name="imgURL" required />
+            </div>
+
+            <div >
+                <label class="y" for="name">Name</label>
+                <input type="text" value="{{ mushroom.name }}" name="name" required />
+            </div>
+          
+            <div >
+                <label class="y" for="kingdom">Kingdom</label>
+                <input type="text" value="{{ mushroom.kingdom }}" name="kingdom" required />
+            </div>
+
+            <div >
+                <label class="y" for="color">Color</label>
+                <input type="text" value="{{ mushroom.color }}" name="color" required />
+            </div>
+
+            <div >
+                <label class="y" for="family">Family</label>
+                <input type="text" value="{{ mushroom.family }}" name="family" required />
+            </div>
+
+            <div >
+                <label class="y" for="species">Species</label>
+                <input type="text" value="{{ mushroom.species }}" name="species" required />
+            </div>
+
+            <button class="x" type="submit">Edit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Atlas - Profile </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/atlascss.css') }}">
+    </head>
+    <body background="https://www.tapeciarnia.pl/tapety/normalne/tapeta-jesienne-drzewa-i-opadle-liscie-w-parku.jpg">
+        <table class="y">
+            <tr>
+                <th scope="row">Email</th>
+                <td>{{user.email}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Password</th>
+                <td>********</td>
+            </tr>
+            <tr>
+                <th scope="row">First Name</th>
+                <td>{{user.firstName}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Last Name</th>
+                <td>{{user.lastName}}</td>
+            </tr>
+        </table>
+        <a class="x" href="/editProfile"> Edit </a>
+        <a class="x" href="/deleteProfile"> Delete </a>
+    </body>
+</html>
